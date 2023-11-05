@@ -29,7 +29,7 @@ def load_user(user_id):
 
 # configure the database
 # CONNECT TO DB (PostgreSQL)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///ctrlxdev.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_URI", "sqlite:///ctrlx_develpr_my.db")
 
 # create the extension
 db = SQLAlchemy()
