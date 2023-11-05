@@ -161,8 +161,8 @@ class IDE(db.Model):
 
 
 # Create the database tables
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 @app.route("/")
 def home():
