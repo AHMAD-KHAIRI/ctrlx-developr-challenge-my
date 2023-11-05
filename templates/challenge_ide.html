@@ -2,26 +2,16 @@
 Challenge{% endblock %} {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <!-- Include the sidebar -->
       {% include 'sidebar.html' %}
     </div>
-    <div class="col-auto">
+    <div class="col-6">
       <!-- Challenges Section -->
       <!-- Challenge 6: IDE App -->
       <div class="pt-4 mt-5 challenge ide" id="ide">
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/ctrlx-python-runtime-app-icon.png"
-          alt=""
-        />
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/ctrlx-ide-app-icon.png"
-          alt=""
-        />
         <h2>6. IDE App Challenge</h2>
-        <p>Complete the tasks for the IDE App challenge:</p>
+        <p>Complete the tasks:</p>
         <form method="post" action="{{ url_for('ide_challenge') }}">
           <div class="list-group-item-action">
             <!-- Checkbox for Task 1 -->
@@ -37,12 +27,12 @@ Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 1: Create a simple Python program
+                >Task 1: Program using Blockly
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='IDE') }}"
                     download="IDE_Challenge_1.pdf"
-                    >Download task 1</a
+                    >Download Task 1 Instructions</a
                   ></small
                 >
               </span>
@@ -61,36 +51,12 @@ Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 2: Blinking using Python
+                >Task 2: Program using Python
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='IDE') }}"
                     download="IDE_Challenge_2.pdf"
-                    >Download task 2</a
-                  ></small
-                >
-              </span>
-            </label>
-            <br />
-            <!-- Checkbox for Task 3 -->
-            <label class="list-group-item d-flex gap-2">
-              <input
-                class="form-check-input flex-shrink-0"
-                type="checkbox"
-                value="checked"
-                name="idetask3"
-                id="idetask3"
-                {{
-                button
-                }}
-              />
-              <span
-                >Task 3: Sequence using Python
-                <small class="d-block text-body-secondary">
-                  <a
-                    href="{{ url_for('download', challenge='IDE') }}"
-                    download="IDE_Challenge_3.pdf"
-                    >Download task 3</a
+                    >Download Task 2 Instructions</a
                   ></small
                 >
               </span>

@@ -2,53 +2,19 @@
 developR Challenge{% endblock %} {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <!-- Include the sidebar -->
       {% include 'sidebar.html' %}
     </div>
-    <div class="col-auto">
+    <div class="col-6">
       <!-- Challenges Section -->
       <!-- Challenge 3: Node-RED App -->
       <div class="pt-4 mt-5 challenge nodered" id="nodered">
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/node-red-app-icon.png"
-          alt=""
-        />
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/node-red-icon.png"
-          alt=""
-        />
         <h2>3. Node-RED App Challenge</h2>
-        <p>Complete the tasks for the Node-RED App challenge:</p>
+        <p>Complete the tasks:</p>
         <form method="post" action="{{ url_for('nodered_challenge') }}">
           <div class="list-group-item-action">
             <!-- Checkbox for Task 1 -->
-            <label class="list-group-item d-flex gap-2">
-              <input
-                class="form-check-input flex-shrink-0"
-                type="checkbox"
-                value="checked"
-                name="noderedtask1"
-                id="noderedtask1"
-                {{
-                button
-                }}
-              />
-              <span
-                >Task 1: Setting up Node-RED App in ctrlX CORE
-                <small class="d-block text-body-secondary">
-                  <a
-                    href="{{ url_for('download', challenge='NODERED') }}"
-                    download="NodeRED_Challenge_1.pdf"
-                    >Download task 1</a
-                  ></small
-                >
-              </span>
-            </label>
-            <br />
-            <!-- Checkbox for Task 2 -->
             <label class="list-group-item d-flex gap-2">
               <input
                 class="form-check-input flex-shrink-0"
@@ -61,18 +27,18 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 2: Conveyor System Dashboard [Monitoring and Controlling]
+                >Task 1: Conveyor System Dashboard
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='NODERED') }}"
                     download="NodeRED_Challenge_2.pdf"
-                    >Download task 2</a
+                    >Download Task 1 Instructions</a
                   ></small
                 >
               </span>
             </label>
             <br />
-            <!-- Checkbox for Task 3 -->
+            <!-- Checkbox for Task 2 -->
             <label class="list-group-item d-flex gap-2">
               <input
                 class="form-check-input flex-shrink-0"
@@ -85,13 +51,12 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 3: Logging ctrlX PLC Process Data in Database [using
-                MySQL]
+                >Task 2: Logging ctrlX PLC Data in Database
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='NODERED') }}"
                     download="NodeRED_Challenge_3.pdf"
-                    >Download task 3</a
+                    >Download Task 2 Instructions</a
                   ></small
                 >
               </span>

@@ -7,13 +7,27 @@
   <div class="row">
     <nav class="sidebar">
       <div class="container-fluid">
-        <ul class="h5 navbar-nav">
+        <ul class="h5 navbar-nav" id="nav">
           <li class="nav-item">
             <a
               class="nav-link {{ 'active' if request.endpoint == 'plc_challenge' }}"
               href="{{ url_for('plc_challenge') }}"
-              >PLC App</a
             >
+              PLC App</a
+            >
+            {% if request.endpoint == 'plc_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-PLC/ba-p/13298"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/ctrlx-plc-app-icon.png"
+                alt="ctrlx-plc-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
           <li class="nav-item">
             <a
@@ -21,6 +35,30 @@
               href="{{ url_for('opcua_challenge') }}"
               >OPC UA App</a
             >
+            {% if request.endpoint == 'opcua_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-OPC-UA-Client/ba-p/13256"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/ctrlx-opcua-client-app-icon.png"
+                alt="ctrlx-opcua-client-app-icon"
+              />
+            </a>
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-OPC-UA-Server/ba-p/13271"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/ctrlx-opcua-server-app-icon.png"
+                alt="ctrlx-opcua-server-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
           <li class="nav-item">
             <a
@@ -28,6 +66,19 @@
               href="{{ url_for('nodered_challenge') }}"
               >Node-RED App</a
             >
+            {% if request.endpoint == 'nodered_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-Node-RED/ba-p/22366"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/node-red-app-icon.png"
+                alt="ctrlx-node-red-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
           <li class="nav-item">
             <a
@@ -35,6 +86,19 @@
               href="{{ url_for('motion_challenge') }}"
               >Motion App</a
             >
+            {% if request.endpoint == 'motion_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-Motion/ba-p/13294"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/ctrlx-motion-app-icon.png"
+                alt="ctrlx-motion-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
           <li class="nav-item">
             <a
@@ -42,6 +106,30 @@
               href="{{ url_for('webiq_challenge') }}"
               >HMI WebIQ App</a
             >
+            {% if request.endpoint == 'webiq_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/Smart-HMI-WebIQ-Server/ba-p/18412"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/smart-hmi-webiq-server-app-icon.png"
+                alt="ctrlx-motion-app-icon"
+              />
+            </a>
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/Smart-HMI-WebIQ-Designer/ba-p/18421"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/smart-hmi-webiq-designer-app-icon.png"
+                alt="ctrlx-motion-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
           <li class="nav-item">
             <a
@@ -49,6 +137,19 @@
               href="{{ url_for('ide_challenge') }}"
               >IDE App</a
             >
+            {% if request.endpoint == 'ide_challenge' %}
+            <a
+              href="https://developer.community.boschrexroth.com/t5/Store-and-How-to/ctrlX-AUTOMATION-IDE/ba-p/21718"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="img-fluid"
+                src="../static/assets/app-icons/ctrlx-ide-app-icon.png"
+                alt="ctrlx-motion-app-icon"
+              />
+            </a>
+            {% endif %}
           </li>
         </ul>
       </div>

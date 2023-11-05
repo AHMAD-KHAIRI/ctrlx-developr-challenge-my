@@ -2,21 +2,16 @@
 developR Challenge{% endblock %} {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <!-- Include the sidebar -->
       {% include 'sidebar.html' %}
     </div>
-    <div class="col-auto">
+    <div class="col-6">
       <!-- Challenges Section -->
       <!-- Challenge 4: Motion App -->
       <div class="pt-4 mt-5 challenge motion" id="motion">
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/ctrlx-motion-app-icon.png"
-          alt=""
-        />
         <h2>4. Motion App Challenge</h2>
-        <p>Complete the tasks for the Motion App challenge:</p>
+        <p>Complete the tasks:</p>
         <form method="post" action="{{ url_for('motion_challenge') }}">
           <div class="list-group-item-action">
             <!-- Checkbox for Task 1 -->
@@ -32,12 +27,12 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 1: Configuring Axis Profile
+                >Task 1: Configuring Axis
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='MOTION') }}"
                     download="Motion_Challenge_1.pdf"
-                    >Download task 1</a
+                    >Download Task 1 Instructions</a
                   ></small
                 >
               </span>
@@ -56,36 +51,12 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 2: Moving in Single Axis
+                >Task 2: Configuring 3D Viewer
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='MOTION') }}"
                     download="Motion_Challenge_2.pdf"
-                    >Download task 2</a
-                  ></small
-                >
-              </span>
-            </label>
-            <br />
-            <!-- Checkbox for Task 3 -->
-            <label class="list-group-item d-flex gap-2">
-              <input
-                class="form-check-input flex-shrink-0"
-                type="checkbox"
-                value="checked"
-                name="motiontask3"
-                id="motiontask3"
-                {{
-                button
-                }}
-              />
-              <span
-                >Task 3: Moving in 3D (X, Y and Z)
-                <small class="d-block text-body-secondary">
-                  <a
-                    href="{{ url_for('download', challenge='MOTION') }}"
-                    download="Motion_Challenge_3.pdf"
-                    >Download task 3</a
+                    >Download Task 2 Instructions</a
                   ></small
                 >
               </span>

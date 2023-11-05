@@ -2,53 +2,19 @@
 developR Challenge{% endblock %} {% block content %}
 <div class="container">
   <div class="row">
-    <div class="col-4">
+    <div class="col-6">
       <!-- Include the sidebar -->
       {% include 'sidebar.html' %}
     </div>
-    <div class="col-auto">
+    <div class="col-6">
       <!-- Challenges Section -->
       <!-- Challenge 2: OPC UA App -->
       <div class="pt-4 mt-5 challenge opcua" id="opcua">
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/ctrlx-opcua-server-app-icon.png"
-          alt=""
-        />
-        <img
-          class="img-fluid mb-4 mx-5"
-          src="../static/assets/app-icons/ctrlx-opcua-client-app-icon.png"
-          alt=""
-        />
         <h2>2. OPC UA App Challenge</h2>
-        <p>Complete the tasks for the OPC UA App challenge:</p>
+        <p>Complete the tasks:</p>
         <form method="post" action="{{ url_for('opcua_challenge') }}">
           <div class="h5 list-group-item-action">
             <!-- Checkbox for Task 1 -->
-            <label class="list-group-item d-flex gap-2">
-              <input
-                class="form-check-input flex-shrink-0"
-                type="checkbox"
-                value="checked"
-                name="opcuatask1"
-                id="opcuatask1"
-                {{
-                button
-                }}
-              />
-              <span
-                >Task 1: Setting up Symbol Configuration in PLC
-                <small class="d-block text-body-secondary">
-                  <a
-                    href="{{ url_for('download', challenge='OPCUA') }}"
-                    download="OPCUA_Challenge_1.pdf"
-                    >Download task 1</a
-                  ></small
-                >
-              </span>
-            </label>
-            <br />
-            <!-- Checkbox for Task 2 -->
             <label class="list-group-item d-flex gap-2">
               <input
                 class="form-check-input flex-shrink-0"
@@ -61,18 +27,18 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 2: Conveyor System Remote Monitoring [Read Variables]
+                >Task 1: Conveyor System Remote Monitoring
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='OPCUA') }}"
                     download="OPCUA_Challenge_2.pdf"
-                    >Download task 2</a
+                    >Download Task 1 Instructions</a
                   ></small
                 >
               </span>
             </label>
             <br />
-            <!-- Checkbox for Task 3 -->
+            <!-- Checkbox for Task 2 -->
             <label class="list-group-item d-flex gap-2">
               <input
                 class="form-check-input flex-shrink-0"
@@ -85,13 +51,12 @@ developR Challenge{% endblock %} {% block content %}
                 }}
               />
               <span
-                >Task 3: Remote Monitoring and Controlling [Read/Write
-                Variables]
+                >Task 2: Remote Monitoring and Controlling
                 <small class="d-block text-body-secondary">
                   <a
                     href="{{ url_for('download', challenge='OPCUA') }}"
                     download="OPCUA_Challenge_3.pdf"
-                    >Download task 3</a
+                    >Download Task 2 Instructions</a
                   ></small
                 >
               </span>
