@@ -1,3 +1,4 @@
 # Ignore files related to API keys, passwords, etc
 *.env
 __pycache__/
+instance/
