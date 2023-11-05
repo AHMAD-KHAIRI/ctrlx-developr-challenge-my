@@ -155,3 +155,8 @@ form .btn-primary {
 #register a {
   color: #002b49;
 }
+
+#nav img {
+  width: 3em;
+  height: 3em;
+}
