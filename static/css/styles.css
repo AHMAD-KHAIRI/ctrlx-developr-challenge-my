@@ -1,0 +1,157 @@
+/* Reset default padding and margin for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: BoschSansDS, sans-serif; */
+  font-family: Arial, sans-serif;
+  background-color: white; /* Background color for the body */
+  color: #333; /* Default text color */
+}
+
+header {
+  background-color: #fff; /* White background for the header */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  padding: 5px; /* Add some padding to the top and bottom */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Add some padding to the sides */
+}
+
+/* Adjust the max-width of the logo */
+/* .navbar-brand img {
+  max-width: 1000px;
+} */
+
+.navbar-toggler-icon {
+  border: 1px solid #333; /* Style the navbar-toggler-icon */
+}
+
+.navbar-nav {
+  list-style: none;
+}
+
+.nav-item {
+  margin-right: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #002b49;
+  transition: color 0.3s;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  /* color: #007bff; */
+  color: #00b0bd;
+}
+
+/* Adjust styles for the container */
+.container {
+  padding-top: 10px;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: "Montserrat", sans-serif;
+  /* Fallback fonts in case Montserrat fails to load */
+}
+
+/* Body text */
+body {
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+/* Adjust maximum width and line height for <p> elements */
+p {
+  max-width: 600px; /* Adjust the width as needed */
+  line-height: 1.6; /* Adjust line height for better readability */
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+/* Style form elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+  display: block; /* This makes labels block-level elements */
+  margin-bottom: 5px; /* Add some spacing below labels */
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style radio and checkbox labels */
+.form-check-label {
+  font-weight: normal;
+  margin-left: 10px;
+}
+
+form .btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  /* background-color: #3595f6; */
+}
+
+.sidebar a {
+  color: white;
+}
+
+/* #sidebar h2,
+#scoreboard h2,
+#register h2,
+#login h2,
+#rules h2,
+#faq h2,
+#contact h2 {
+  color: red;
+} */
+
+#logout a {
+  color: red;
+  font-weight: bold;
+}
+
+#letterx strong {
+  color: red;
+}
+
+#register a {
+  color: #002b49;
+}

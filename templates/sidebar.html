@@ -1,0 +1,57 @@
+<div class="container mt-3" id="sidebar">
+  <div class="row">
+    <h2 class="border-bottom" id="letterx">
+      ctrl<strong>X</strong> developR Challenges
+    </h2>
+  </div>
+  <div class="row">
+    <nav class="sidebar">
+      <div class="container-fluid">
+        <ul class="h5 navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'plc_challenge' }}"
+              href="{{ url_for('plc_challenge') }}"
+              >PLC App</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'opcua_challenge' }}"
+              href="{{ url_for('opcua_challenge') }}"
+              >OPC UA App</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'nodered_challenge' }}"
+              href="{{ url_for('nodered_challenge') }}"
+              >Node-RED App</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'motion_challenge' }}"
+              href="{{ url_for('motion_challenge') }}"
+              >Motion App</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'webiq_challenge' }}"
+              href="{{ url_for('webiq_challenge') }}"
+              >HMI WebIQ App</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {{ 'active' if request.endpoint == 'ide_challenge' }}"
+              href="{{ url_for('ide_challenge') }}"
+              >IDE App</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

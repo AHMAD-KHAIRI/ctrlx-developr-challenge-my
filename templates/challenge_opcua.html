@@ -1,0 +1,116 @@
+{% extends 'base.html' %} {% block title %}OPC UA App Challenges - ctrlX
+developR Challenge{% endblock %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <!-- Include the sidebar -->
+      {% include 'sidebar.html' %}
+    </div>
+    <div class="col-auto">
+      <!-- Challenges Section -->
+      <!-- Challenge 2: OPC UA App -->
+      <div class="pt-4 mt-5 challenge opcua" id="opcua">
+        <img
+          class="img-fluid mb-4 mx-5"
+          src="../static/assets/app-icons/ctrlx-opcua-server-app-icon.png"
+          alt=""
+        />
+        <img
+          class="img-fluid mb-4 mx-5"
+          src="../static/assets/app-icons/ctrlx-opcua-client-app-icon.png"
+          alt=""
+        />
+        <h2>2. OPC UA App Challenge</h2>
+        <p>Complete the tasks for the OPC UA App challenge:</p>
+        <form method="post" action="{{ url_for('opcua_challenge') }}">
+          <div class="h5 list-group-item-action">
+            <!-- Checkbox for Task 1 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="opcuatask1"
+                id="opcuatask1"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 1: Setting up Symbol Configuration in PLC
+                <small class="d-block text-body-secondary">
+                  <a
+                    href="{{ url_for('download', challenge='OPCUA') }}"
+                    download="OPCUA_Challenge_1.pdf"
+                    >Download task 1</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- Checkbox for Task 2 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="opcuatask2"
+                id="opcuatask2"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 2: Conveyor System Remote Monitoring [Read Variables]
+                <small class="d-block text-body-secondary">
+                  <a
+                    href="{{ url_for('download', challenge='OPCUA') }}"
+                    download="OPCUA_Challenge_2.pdf"
+                    >Download task 2</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- Checkbox for Task 3 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="opcuatask3"
+                id="opcuatask3"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 3: Remote Monitoring and Controlling [Read/Write
+                Variables]
+                <small class="d-block text-body-secondary">
+                  <a
+                    href="{{ url_for('download', challenge='OPCUA') }}"
+                    download="OPCUA_Challenge_3.pdf"
+                    >Download task 3</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- "Complete" Button - Rendered conditionally based on checkbox status -->
+            <div class="mt-3 mb-3">
+              <button type="submit" class="btn btn-info btn-lg" {{ button }}>
+                Task Completed
+              </button>
+              <!-- add a flash message here -->
+              {% with messages = get_flashed_messages() %} {% if messages %}
+              <p class="flashes">{{ messages[0] }}</p>
+              {% endif %} {% endwith %}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

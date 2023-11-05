@@ -1,0 +1,110 @@
+{% extends 'base.html' %} {% block title %}PLC App Challenges - ctrlX developR
+Challenge{% endblock %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+      <!-- Include the sidebar -->
+      {% include 'sidebar.html' %}
+    </div>
+    <div class="col-auto">
+      <!-- Challenges Section -->
+      <!-- Challenge 1: PLC App -->
+      <div class="pt-4 mt-5 challenge plc" id="plc">
+        <img
+          class="img-fluid mb-4 mx-5"
+          src="../static/assets/app-icons/ctrlx-plc-app-icon.png"
+          alt=""
+        />
+        <h2>1. PLC App Challenge</h2>
+        <p>Complete the tasks for the PLC App challenge:</p>
+        <form method="post" action="{{ url_for('plc_challenge') }}">
+          <div class="h5 list-group-item-action">
+            <!-- Checkbox for Task 1 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="plctask1"
+                id="plctask1"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 1: Setting up ctrlX PLC Engineering
+                <small class="d-block text-body-secondary" id="download">
+                  <a
+                    href="{{ url_for('download', challenge='PLC') }}"
+                    download="PLC_Challenge_1.pdf"
+                    >Download task 1</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- Checkbox for Task 2 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="plctask2"
+                id="plctask2"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 2: Conveyor System [Latching Circuits]
+                <small class="d-block text-body-secondary">
+                  <a
+                    href="{{ url_for('download', challenge='PLC') }}"
+                    download="PLC_Challenge_2.pdf"
+                    >Download task 2</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- Checkbox for Task 3 -->
+            <label class="list-group-item d-flex gap-2">
+              <input
+                class="form-check-input flex-shrink-0"
+                type="checkbox"
+                value="checked"
+                name="plctask3"
+                id="plctask3"
+                {{
+                button
+                }}
+              />
+              <span
+                >Task 3:Chemical Processing Plant [Timer Function]
+                <small class="d-block text-body-secondary">
+                  <a
+                    href="{{ url_for('download', challenge='PLC') }}"
+                    download="PLC_Challenge_3.pdf"
+                    >Download task 3</a
+                  ></small
+                >
+              </span>
+            </label>
+            <br />
+            <!-- "Complete" Button -->
+            <div class="mt-3 mb-3">
+              <button type="submit" class="btn btn-info btn-lg" {{ button }}>
+                Task Completed
+              </button>
+              <!-- add a flash message here -->
+              {% with messages = get_flashed_messages() %} {% if messages %}
+              <p class="flashes">{{ messages[0] }}</p>
+              {% endif %} {% endwith %}
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

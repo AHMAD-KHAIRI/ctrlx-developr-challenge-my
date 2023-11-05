@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% block title %}Rules - ctrlX developR Challenge{%
+endblock %} {% block content %}
+<div class="container mt-4" id="rules">
+  <div class="row">
+    <h2 class="mb-4 border-bottom">Rules</h2>
+  </div>
+  <div class="row">
+    <ul class="nav nav-pills" id="rulesTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link active"
+          id="howToPlay-tab"
+          data-bs-toggle="tab"
+          href="#howToPlay"
+          role="tab"
+          aria-controls="howToPlay"
+          aria-selected="true"
+          >How to Play</a
+        >
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link"
+          id="fairPlayGuidelines-tab"
+          data-bs-toggle="tab"
+          href="#fairPlayGuidelines"
+          role="tab"
+          aria-controls="fairPlayGuidelines"
+          aria-selected="false"
+          >Fair Play Guidelines</a
+        >
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4 col-auto" id="rulesTabsContent">
+      <div
+        class="tab-pane fade show active"
+        id="howToPlay"
+        role="tabpanel"
+        aria-labelledby="howToPlay-tab"
+      >
+        <h3>
+          To participate in the ctrlX developR Challenge, follow these steps:
+        </h3>
+        <br />
+        <ol>
+          <li class="h4">
+            Form a team of four persons, then register your team and login into
+            the platform.
+          </li>
+          <br />
+          <li class="h4">
+            Complete the tasks within the deadline for each ctrlX App challenge
+            using the ctrlX CORE platform.
+          </li>
+          <br />
+          <li class="h4">
+            Every ctrlX App challenge completed will be awarded with score
+            points and the duration will be recorded.
+          </li>
+          <br />
+          <li class="h4">
+            Complete all challenges and the team with the fastest total duration
+            is the winner.
+          </li>
+          <br />
+        </ol>
+        <h3>Make sure to adhere to the fair play guidelines.</h3>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="fairPlayGuidelines"
+        role="tabpanel"
+        aria-labelledby="fairPlayGuidelines-tab"
+      >
+        <h3>
+          Fair play is essential in the ctrlX developR Challenge. Participants
+          are expected to:
+        </h3>
+        <br />
+        <ol>
+          <li class="h4">Respect the rules and guidelines of the challenge.</li>
+          <br />
+          <li class="h4">Avoid plagiarism and ensure project originality.</li>
+          <br />
+          <li class="h4">
+            Behave ethically and professionally throughout the competition.
+          </li>
+        </ol>
+        <br />
+        <h3>
+          Unfair practices, such as cheating or violating ethical standards,
+          will result in disqualification.
+        </h3>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

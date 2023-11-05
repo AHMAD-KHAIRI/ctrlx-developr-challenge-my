@@ -1,0 +1,12 @@
+{% from "bootstrap5/form.html" import render_form %} {% extends 'base.html' %}
+{% block title %}Registration - ctrlX developR challenge{% endblock %} {% block
+content %}
+<div class="container mt-4" id="register">
+  <div class="row">
+    <h2 class="mb-4 border-bottom">Registration</h2>
+  </div>
+  <div class="row form-group">
+    <div class="col-auto mx-auto">{{ render_form(form, novalidate=True) }}</div>
+  </div>
+</div>
+{% endblock %}

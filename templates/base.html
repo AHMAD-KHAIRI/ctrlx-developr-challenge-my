@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block styles %}
+    <!-- Load Bootstrap 5 CSS and your custom CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/styles.css" />
+    <link rel="icon" href="../static/assets/img/favicon.ico" />
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body
+    style="
+      background-image: url(../static/assets/img/dc-ae_ctrlx_core_wallpaper.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 900px;
+    "
+  >
+    <main>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Navbar content -->
+        <div class="container">
+          <a
+            class="navbar-brand mt-2 px-2"
+            href="https://www.boschrexroth.com/en/my/"
+          >
+            <img
+              src="https://apps.boschrexroth.com/microsites/ctrlx-automation/files/ctrlx/Logos-Favicons-Icons%20%28do%20not%20delete%2C%20or%20you%20are%20get%20killed%20%3B-%29%29/Header-Logos_ctrlX_Rexroth/rexroth_Logo_web_small.gif"
+              alt="bosch rexroth logo"
+              class="img-fluid"
+              loading="lazy"
+            />
+          </a>
+          <a
+            class="navbar-brand"
+            href="https://apps.boschrexroth.com/microsites/ctrlx-automation/en/"
+          >
+            <img
+              src="https://apps.boschrexroth.com/microsites/ctrlx-automation/files/ctrlx/Logos-Favicons-Icons%20%28do%20not%20delete%2C%20or%20you%20are%20get%20killed%20%3B-%29%29/Header-Logos_ctrlX_Rexroth/ctrlX_Logo_web_small.gif"
+              alt="bosch rexroth logo"
+              class="img-fluid"
+              loading="lazy"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="h5 navbar-nav ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'home' }}"
+                  href="{{ url_for('home') }}"
+                  >Home</a
+                >
+              </li>
+              {% if not current_user.is_authenticated: %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'registration' }}"
+                  href="{{ url_for('registration') }}"
+                  >Register</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'login' }}"
+                  href="{{ url_for('login') }}"
+                  >Login</a
+                >
+              </li>
+              {% else: %}
+              <!-- class="nav-link {{ 'active' if request.endpoint == 'challenges' }}" -->
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint in ['challenges', 'plc_challenge', 'opcua_challenge', 'nodered_challenge', 'motion_challenge', 'webiq_challenge', 'ide_challenge'] }}"
+                  href="{{ url_for('challenges') }}"
+                  >Challenges</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'scores' }}"
+                  href="{{ url_for('scores') }}"
+                  >Scores</a
+                >
+              </li>
+              <li class="nav-item" id="logout">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'logout' }}"
+                  href="{{ url_for('logout') }}"
+                  >Logout</a
+                >
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'rules' }}"
+                  href="{{ url_for('rules') }}"
+                  >Rules</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'faqs' }}"
+                  href="{{ url_for('faqs') }}"
+                  >FAQ</a
+                >
+              </li>
+              <!-- Only show if user id is 1 (admin user) -->
+              {% if current_user.id == 1: %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'podium' }}"
+                  href="{{ url_for('podium') }}"
+                  >Podium</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'dashboard' }}"
+                  href="{{ url_for('dashboard') }}"
+                  >Dashboard</a
+                >
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </main>
+    {% block content %}{% endblock %}
+    <div class="container footer mt-4">
+      <div class="row">
+        <div class="col-auto">
+          <p class="h6">
+            <span>©</span>
+            Bosch Rexroth Sdn. Bhd., 2023, all rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+    {% block scripts %}
+    <!-- Add Bootstrap 5 JavaScript and your custom scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {% endblock %}
+  </body>
+</html>

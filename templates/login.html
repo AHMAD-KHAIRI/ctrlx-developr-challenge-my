@@ -1,0 +1,20 @@
+{% from "bootstrap5/form.html" import render_form %} {% extends 'base.html' %}
+{% block title %}ctrlX developR challenge{% endblock %} {% block content %}
+<div class="container mt-4" id="login">
+  <div class="row">
+    <h2 class="mb-4 border-bottom">Log In</h2>
+  </div>
+  <div class="row form-group">
+    <div class="col-auto mx-auto">
+      {{ render_form(form, novalidate=True) }}
+      <!-- add a flash message here for users that are using an invalid email -->
+      {% with messages = get_flashed_messages() %} {% if messages %}
+      <p class="flashes">
+        {{ messages[0] }} <br />If you have not yet registered, go to the
+        <a href="{{ url_for('registration') }}">Register</a> page.
+      </p>
+      {% endif %} {% endwith %}
+    </div>
+  </div>
+</div>
+{% endblock %}

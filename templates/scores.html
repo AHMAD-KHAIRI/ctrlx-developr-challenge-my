@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block title %}Scoreboard - ctrlX developR
+Challenge{% endblock %} {% block content %}
+<div class="container mt-4" id="scoreboard">
+  <div class="row">
+    <h2 class="mb-4 border-bottom">Scoreboard</h2>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      {% if current_user.id == 1: %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Group Name</th>
+            <th>Score</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for user in all_users_data: %}
+          <tr>
+            <td>{{ user.ranking }}</td>
+            <td>{{ user.group_name }}</td>
+            <td>{{ user.total_score }}</td>
+            <td>{{ user.total_duration }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else: %}
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Group Name</th>
+            <th>Score</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ current_user.group_name }}</td>
+            <td>{{ score }}</td>
+            <td>{{ duration }}</td>
+          </tr>
+        </tbody>
+      </table>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
