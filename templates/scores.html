@@ -5,13 +5,13 @@ Challenge{% endblock %} {% block content %}
     <h2 class="mb-4 border-bottom">Scoreboard</h2>
   </div>
   <div class="row">
-    <div class="col-5">
+    <div class="col-8">
       {% if current_user.id == 1: %}
       <table class="table">
         <thead>
           <tr>
             <th>Rank</th>
-            <th>Group Name</th>
+            <th>Group</th>
             <th>Score</th>
             <th>Duration</th>
           </tr>
@@ -31,7 +31,7 @@ Challenge{% endblock %} {% block content %}
       <table class="table">
         <thead>
           <tr>
-            <th>Group Name</th>
+            <th>Group</th>
             <th>Score</th>
             <th>Duration</th>
           </tr>
