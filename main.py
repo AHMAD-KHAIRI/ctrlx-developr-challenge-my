@@ -598,6 +598,8 @@ def scores():
             user_data["ranking"] = ranking
             ranking += 1
 
+        # TO-DO: Add feature to sort according to highest score first and lowest duration
+
         return render_template("scores.html", all_users_data=all_users_data)
 
     else:
