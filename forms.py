@@ -26,9 +26,10 @@ class RegistrationForm(FlaskForm):
     # group_member_three = StringField(label='Group member three: Enter your name')
     # group_member_four = StringField(label='Group member four: Enter your name')
 
-    # sector_categories = MultiCheckboxField(label='Industry Sector Categories:',
-    #                             choices=[('education', 'Education Institution'), 
-    #                                         ('professional', 'Industry Professional')],validators=[InputRequired(message="Please select one.")])
+    # TO-DO: Add sector categories and store in database
+    sector_categories = MultiCheckboxField(label='Industry Sector Categories:',
+                                choices=[('academia', 'Academia'), 
+                                            ('industry', 'Industry')],validators=[InputRequired(message="Please select one.")])
     # occupation = StringField(label='Occupation:')
     # # occupation = StringField(label='Occupation:', render_kw={"style": "display: none;"})
     # education = StringField(label='Enter your education background', validators=[DataRequired(message="This field is required.")])

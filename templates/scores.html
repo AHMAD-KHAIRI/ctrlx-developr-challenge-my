@@ -5,9 +5,11 @@ Challenge{% endblock %} {% block content %}
     <h2 class="mb-4 border-bottom">Scoreboard</h2>
   </div>
   <div class="row">
+    <!-- Add 2 tables: 1) Academia, 2) Industry -->
+    {% if current_user.id == 1: %}
     <div class="col-auto">
-      {% if current_user.id == 1: %}
-      <table class="table">
+      <h3 class="mb-4 border-bottom">Academia</h3>
+      <table class="table" id="academia-score-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -27,7 +29,32 @@ Challenge{% endblock %} {% block content %}
           {% endfor %}
         </tbody>
       </table>
-      {% else: %}
+    </div>
+    <div class="col-auto">
+      <h3 class="mb-4 border-bottom">Industry</h3>
+      <table class="table" id="industry-score-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Group</th>
+            <th>Score</th>
+            <th>Duration</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%for user in all_users_data: %}
+          <tr>
+            <td>{{ user.ranking }}</td>
+            <td>{{ user.group_name }}</td>
+            <td>{{ user.total_score }}</td>
+            <td>{{ user.total_duration }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else: %}
+    <div class="col-auto">
       <table class="table">
         <thead>
           <tr>
@@ -44,8 +71,8 @@ Challenge{% endblock %} {% block content %}
           </tr>
         </tbody>
       </table>
-      {% endif %}
     </div>
+    {% endif %}
   </div>
 </div>
 {% endblock %}
