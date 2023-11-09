@@ -44,7 +44,7 @@ class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     group_name = db.Column(db.String(50), nullable=False)
     # TO-DO: Add sector category 1) Academia, 2) Industry
-    category = db.Column(db.String(50), nullable=False)
+    # category = db.Column(db.String(50), nullable=False)
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(250))
     plcScores = relationship("PLC", back_populates = "user")
