@@ -20,16 +20,16 @@ class MultiCheckboxField(SelectMultipleField):
     option_widget = widgets.CheckboxInput()
 
 class RegistrationForm(FlaskForm):
-    group_name = StringField(label='Team name', validators=[DataRequired(message="This field is required.")])
+    group_name = StringField(label='Team name', validators=[DataRequired(message="This field is required. For Academia, insert A_ before your Group name. For Industry, insert I_ before your Group name.")])
     # group_member_one = StringField(label='Group member one: Enter your name', validators=[DataRequired(message="This field is required.")])
     # group_member_two = StringField(label='Group member two: Enter your name')
     # group_member_three = StringField(label='Group member three: Enter your name')
     # group_member_four = StringField(label='Group member four: Enter your name')
 
     # TO-DO: Add sector categories and store in database
-    sector_categories = MultiCheckboxField(label='Industry Sector Categories:',
-                                choices=[('academia', 'Academia'), 
-                                            ('industry', 'Industry')],validators=[InputRequired(message="Please select one.")])
+    # sector_categories = MultiCheckboxField(label='Industry Sector Categories:',
+    #                             choices=[('academia', 'Academia'), 
+    #                                         ('industry', 'Industry')],validators=[InputRequired(message="Please select one.")])
     # occupation = StringField(label='Occupation:')
     # # occupation = StringField(label='Occupation:', render_kw={"style": "display: none;"})
     # education = StringField(label='Enter your education background', validators=[DataRequired(message="This field is required.")])
