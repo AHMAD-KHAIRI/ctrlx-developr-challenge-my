@@ -554,6 +554,11 @@ def ide_challenge():
     return render_template("challenge_ide.html", logged_in=True, button=button)
 
 # Only logged-in users can download the pdf
+@app.route('/download')
+@login_required
+def download():
+    return send_from_directory('static', path="./files/cheat_sheet.pdf")
+
 @app.route('/download_plc_task1')
 @login_required
 def download_plc_task1():
@@ -562,7 +567,52 @@ def download_plc_task1():
 @app.route('/download_plc_task2')
 @login_required
 def download_plc_task2():
-    return send_from_directory('static', path="./files/ctrlX_PLC_Task_1_v22112023.pdf")
+    return send_from_directory('static', path="./files/ctrlX_PLC_Task_2_v22112023.pdf")
+
+@app.route('/download_opcua_task1')
+@login_required
+def download_opcua_task1():
+    return send_from_directory('static', path="./files/ctrlX_OPCUA_Task_1_v22112023.pdf")
+
+@app.route('/download_opcua_task2')
+@login_required
+def download_opcua_task2():
+    return send_from_directory('static', path="./files/ctrlX_OPCUA_Task_2_v22112023.pdf")
+
+@app.route('/download_nodered_task1')
+@login_required
+def download_nodered_task1():
+    return send_from_directory('static', path="./files/ctrlX_NodeRED_Task_1_v22112023.pdf")
+
+@app.route('/download_nodered_task2')
+@login_required
+def download_nodered_task2():
+    return send_from_directory('static', path="./files/ctrlX_NodeRED_Task_2_v22112023.pdf")
+
+@app.route('/download_motion_task1')
+@login_required
+def download_motion_task1():
+    return send_from_directory('static', path="./files/ctrlX_Motion_Task_1_v22112023.pdf")
+
+@app.route('/download_motion_task2')
+@login_required
+def download_motion_task2():
+    return send_from_directory('static', path="./files/ctrlX_Motion_Task_2_v22112023.pdf")
+
+@app.route('/download_webiq_task1')
+@login_required
+def download_webiq_task1():
+    return send_from_directory('static', path="./files/ctrlX_WebIQ_Task_1_v22112023.pdf")
+
+@app.route('/download_webiq_task2')
+@login_required
+def download_webiq_task2():
+    return send_from_directory('static', path="./files/ctrlX_WebIQ_Task_2_v22112023.pdf")
+
+@app.route('/download_ide_task1')
+@login_required
+def download_ide_task1():
+    return send_from_directory('static', path="./files/ctrlX_IDE_Task_1_v22112023.pdf")
 
 @app.route("/scores")
 @login_required
