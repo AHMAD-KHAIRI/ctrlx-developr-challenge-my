@@ -554,10 +554,15 @@ def ide_challenge():
     return render_template("challenge_ide.html", logged_in=True, button=button)
 
 # Only logged-in users can download the pdf
-@app.route('/download')
+@app.route('/download_plc_task1')
 @login_required
-def download():
-    return send_from_directory('static', path="./files/cheat_sheet.pdf")
+def download_plc_task1():
+    return send_from_directory('static', path="./files/ctrlX_PLC_Task_1_v22112023.pdf")
+
+@app.route('/download_plc_task2')
+@login_required
+def download_plc_task2():
+    return send_from_directory('static', path="./files/ctrlX_PLC_Task_1_v22112023.pdf")
 
 @app.route("/scores")
 @login_required
