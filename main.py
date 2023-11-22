@@ -677,7 +677,8 @@ def podium():
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route('/feedback')
+@app.route('/feedback', methods=["GET"])
+@login_required
 def feedback():
     return render_template("feedback.html")
 
