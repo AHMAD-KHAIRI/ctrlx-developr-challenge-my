@@ -20,7 +20,7 @@ class MultiCheckboxField(SelectMultipleField):
     option_widget = widgets.CheckboxInput()
 
 class RegistrationForm(FlaskForm):
-    group_name = StringField(label='Team name', validators=[DataRequired(message="This field is required. For Academia, insert A_ before your Group name. For Industry, insert I_ before your Group name.")])
+    group_name = StringField(label='Team name', validators=[DataRequired(message="This field is required.")])
     # group_member_one = StringField(label='Group member one: Enter your name', validators=[DataRequired(message="This field is required.")])
     # group_member_two = StringField(label='Group member two: Enter your name')
     # group_member_three = StringField(label='Group member three: Enter your name')
