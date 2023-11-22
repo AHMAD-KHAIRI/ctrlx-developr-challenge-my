@@ -110,6 +110,13 @@
                   >Logout</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {{ 'active' if request.endpoint == 'feedback' }}"
+                  href="{{ url_for('feedback') }}"
+                  >Feedback</a
+                >
+              </li>
               {% endif %}
               <li class="nav-item">
                 <a
@@ -134,13 +141,13 @@
                   >Podium</a
                 >
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a
                   class="nav-link {{ 'active' if request.endpoint == 'dashboard' }}"
                   href="{{ url_for('dashboard') }}"
                   >Dashboard</a
                 >
-              </li>
+              </li> -->
               {% endif %}
             </ul>
           </div>

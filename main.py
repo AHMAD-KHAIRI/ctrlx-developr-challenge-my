@@ -673,9 +673,9 @@ def scores():
 def podium():
     return render_template("podium.html")
 
-@app.route('/dashboard')
-def dashboard():
-    return render_template("dashboard.html")
+@app.route('/feedback')
+def feedback():
+    return render_template("feedback.html")
 
 if __name__ == "__main__":
     app.run(debug=False)
