@@ -162,9 +162,9 @@ class IDE(db.Model):
     user = relationship("User", back_populates = "ideScores")
 
 
-# Create the database tables
-with app.app_context():
-    db.create_all()
+# # Create the database tables (only done once, then comment it!)
+# with app.app_context():
+#     db.create_all()
 
 @app.route("/")
 def home():
